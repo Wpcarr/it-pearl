@@ -8,43 +8,100 @@ body {
   line-height: 1.6;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-  margin-top: 20px;
-  font-size: 2.5rem;
-  color: #ffffff; /* Pure white for main headings */
+  color: #ffffff; /* Pure white for titles */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-nav {
-  text-align: center;
+h1 {
+  font-size: 2.5rem;
   margin-top: 20px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #bb86fc; /* Accent underline */
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-li {
+nav ul, .dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li, .dropdown-menu li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 10px;
 }
 
 a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #bb86fc; /* Bright accent color for links */
+  color: #bb86fc;
   padding: 10px 20px;
-  border: 2px solid #bb86fc; /* Matches link color */
+  border: 2px solid #bb86fc;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover {
   background-color: #bb86fc;
-  color: #121212; /* Inverts to dark background on hover */
-  transform: scale(1.1); /* Slight zoom effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Modern shadow effect */
+  color: #121212;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-/* chat gpt written*/
+
+/* Dropdown Styling */
+.dropdown {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #1e1e1e; /* Slightly lighter than background */
+  color: #bb86fc;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 2px solid #bb86fc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-button:hover {
+  background-color: #bb86fc;
+  color: #121212;
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #1e1e1e; /* Dropdown menu background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 5px 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show on hover */
+}
