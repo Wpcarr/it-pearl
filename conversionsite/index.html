@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter (AJAX)</title>
+    <link rel="stylesheet" href="assests/css/sytle.css">
+</head>
+<body>
+    <h1>Unit Converter (AJAX)</h1>
+    <div class="container">
+        <form id="converterForm">
+            <label for="fromValue">From Value:</label>
+            <input type="text" id="fromValue" name="fromValue">
+            <span class="error" id="valueError">Value is Required</span>
+            <br>
+            <label>From Unit:</label>
+            <input type="radio" name="fromUnit" value="cm"> centimeters
+            <input type="radio" name="fromUnit" value="m"> meters
+            <input type="radio" name="fromUnit" value="km"> kilometers
+            <input type="radio" name="fromUnit" value="in"> inches
+            <input type="radio" name="fromUnit" value="ft"> feet
+            <input type="radio" name="fromUnit" value="yd"> yards
+            <input type="radio" name="fromUnit" value="mi"> miles
+            <span class="error" id="fromUnitError">From Unit is Required</span>
+            <br>
+            <label>To Unit:</label>
+            <input type="radio" name="toUnit" value="cm"> centimeters
+            <input type="radio" name="toUnit" value="m"> meters
+            <input type="radio" name="toUnit" value="km"> kilometers
+            <input type="radio" name="toUnit" value="in"> inches
+            <input type="radio" name="toUnit" value="ft"> feet
+            <input type="radio" name="toUnit" value="yd"> yards
+            <input type="radio" name="toUnit" value="mi"> miles
+            <span class="error" id="toUnitError">To Unit is Required</span>
+            <br>
+            <label>To Value:</label>
+            <span id="toValue"></span>
+            <br>
+            <button type="button" id="calculate">Calculate</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+    </div>
+    <script src="assests/js/script.js"></script>
+</body>
+</html>
