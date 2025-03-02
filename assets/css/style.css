@@ -116,3 +116,24 @@ a:hover {
 #logo h3{
   text-align: center;
 }
+.wrapper {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center the wrapper */
+  padding: 20px; /* Add some padding */
+  background-color: #1e1e1e; /* Optional: Add a background color */
+  border: 1px solid #ddd; /* Optional: Add a border */
+}
+.progressive-enhancement-link {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  color: rgb(80, 80, 138); /* Set link color */
+  text-decoration: underline; /* Add underline */
+  cursor: pointer; /* Ensure it looks clickable */
+}
+
+/* Example: Add hover effect */
+.progressive-enhancement-link:hover {
+  color: rgb(80, 80, 138); /* Change color on hover */
+  text-decoration: none; /* Optional: Remove underline on hover */
+}
