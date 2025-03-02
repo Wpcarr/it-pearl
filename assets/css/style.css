@@ -113,3 +113,6 @@ a:hover {
   margin: 20px auto; /* Center the image */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
 }
+#logo h3{
+  text-align: center;
+}

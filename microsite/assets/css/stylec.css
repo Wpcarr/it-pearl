@@ -1,0 +1,291 @@
+/* General Styles */
+
+body {
+    font-family: 'bungiefont', bungie-font;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+@font-face {
+    font-family:'bungiefont' ;
+    src: url('fonts/bungiefont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    color: #ffcc00;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+header.primary {
+    background-color: rgba(18, 18, 18, 0.9);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto;
+}
+
+header.primary nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+header.primary nav ul li {
+    margin-left: 20px;
+}
+
+header.primary nav ul li a {
+    color: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header.primary nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.7); /* Transparent background */
+    z-index: 10;
+    padding: 10px 0; /* Padding for nav bar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add a shadow effect for some depth */
+    display: flex;
+    justify-content: space-between; /* Keep logo on the left, menu on the right */
+    align-items: center; /* Vertically center items */
+}
+
+/* Logo and Text in Navigation */
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav .logo img {
+    max-height: 40px; /* Adjust the size of the logo */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+nav .logo h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 10px;
+    text-align: left; /* Keep the text aligned to the left of the logo */
+    display: block;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 20px; /* Add some space from the right */
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+}
+
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Class Introduction Section */
+#class-intro {
+    text-align: center;
+    background-color: #1a1a2e; /* Matches home page sections */
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#class-intro h2 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+}
+
+#class-intro p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Class Sections */
+.class-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle contrast */
+    padding: 50px 0;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    text-align: center;
+}
+
+.class-info {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.class-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.class-info p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+#class-intro img {
+    width: 80%; /* Adjust the width of the image */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+border-radius: 8px;
+}
+
+
+
+/* 🚀 Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    height: 300px; /* Ensure a fixed height */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔄 Carousel Wrapper */
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 🖼️ Ensure Images Fit Properly */
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill without distortion */
+    flex-shrink: 0; /* Prevents images from resizing incorrectly */
+}
+
+
+
+/* ⬅️➡️ Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 204, 0, 0.7);
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: #ffcc00;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Class Info List */
+.class-info ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.class-info ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.class-info ul li::before {
+    content: '•';
+    color: #ffcc00;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #1a1a2e;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+footer a {
+    color: #ffcc00;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

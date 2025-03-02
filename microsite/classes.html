@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Destiny 2 - Classes</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore Destiny 2 Guardian classes: Titan, Warlock, and Hunter.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="assets/css/stylec.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="primary">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/d2logowp.webp" alt="Destiny 2 Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="activities.html">Game Modes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Class Introduction Section -->
+    <section id="class-intro" class="container">
+        <h2>Become a Guardian</h2>
+        <p>Choose from three distinct classes, each with its own strengths and abilities.</p>
+        <img src="assets/img/thegaurdians.jpg" alt="Guardians" class="responsive-img">
+    </section>
+
+    <!-- TITAN SECTION -->
+    <section id="titan" class="class-section">
+        <div class="class-info">
+            <h2>Titan</h2>
+            <p>The frontline warrior. Masters of defense and brute strength. Titans use their strength to protect allies and crush enemies.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/strikertitan.jpg" alt="Striker Image">
+                    <img src="assets/img/sentineltitan.jpg" alt="Sentinel Image">
+                    <img src="assets/img/sunbreaker2.jpg" alt="Sunbreaker Image">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Striker:</strong> Unleash powerful arc-based attacks.</li>
+                <li><strong>Sentinel:</strong> Defend your team with void shields.</li>
+                <li><strong>Sunbreaker:</strong> Wield flaming hammers of destruction.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- WARLOCK SECTION -->
+    <section id="warlock" class="class-section">
+        <div class="class-info">
+            <h2>Warlock</h2>
+            <p>Harness the power of the Light and use it to support your allies. Warlocks are the mystics of the battlefield, wielding arcane energy.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/dawnblade.webp" alt="Dawnblade Image">
+                    <img src="assets/img/voidwalker.jpg" alt="Voidwalker Image">
+                    <img src="assets/img/stormcaller.jpg" alt="Stormcaller Image">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Dawnblade:</strong> Soar through the air with flaming swords.</li>
+                <li><strong>Voidwalker:</strong> Channel deadly void energy.</li>
+                <li><strong>Stormcaller:</strong> Unleash powerful lightning attacks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- HUNTER SECTION -->
+    <section id="hunter" class="class-section">
+        <div class="class-info">
+            <h2>Hunter</h2>
+            <p>Quick, agile, and deadly. Masters of precision and movement. Hunters are the scouts of the Last City, striking with deadly efficiency.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/gunslinger.jpg" alt="gunslinger Image">
+                    <img src="assets/img/arcstrider.jpg" alt="arcstrider Image">
+                    <img src="assets/img/nightstalker.jpg" alt="nightstalker Image">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Gunslinger:</strong> Use golden gun to incinerate enemies.</li>
+                <li><strong>Arcstrider:</strong> Dance through battle with a staff of pure arc energy.</li>
+                <li><strong>Nightstalker:</strong> Utilize void energy to trap enemies.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="colophon">
+        <div class="social-links">
+            <a href="https://twitter.com/Bungie" target="_blank" aria-label="Twitter">Twitter</a>
+            <a href="https://www.youtube.com/user/Bungie" target="_blank" aria-label="YouTube">YouTube</a>
+            <a href="https://www.instagram.com/bungie/" target="_blank" aria-label="Instagram">Instagram</a>
+        </div>
+        <p>&copy; 2024 Wesley Carr | <a href="mailto:wpcarr@ualr.edu">Contact</a> | <a href="https://www.bungie.net/7/en/destiny" target="_blank">Official Site</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousels = document.querySelectorAll(".carousel-container");
+
+            carousels.forEach((carouselContainer) => {
+                const carousel = carouselContainer.querySelector(".carousel");
+                const images = carousel.querySelectorAll("img");
+                let index = 0;
+
+                const nextBtn = carouselContainer.querySelector(".next");
+                const prevBtn = carouselContainer.querySelector(".prev");
+
+                function updateCarousel() {
+                    carousel.style.transform = `translateX(-${index * 100}%)`;
+                }
+
+                nextBtn.addEventListener("click", () => {
+                    index = (index + 1) % images.length;
+                    updateCarousel();
+                });
+
+                prevBtn.addEventListener("click", () => {
+                    index = (index - 1 + images.length) % images.length;
+                    updateCarousel();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding-top: 60px; /* Adjust this value based on the height of the navbar */
+    text-align: center;
+}
+@font-face {
+    font-family:'bungiefont' ;
+    src: url('fonts/bungiefont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'bungiefont',  material-icon;
+}
+/* Main Page Specific Header */
+body.main-page header.primary {
+    height: 100vh; /* Keep fullscreen header on the main page */
+}
+
+/* Classes and Game Modes Page Specific Header */
+body:not(.main-page) header.primary {
+    height: auto; /* Remove fullscreen height on other pages */
+    padding: 20px 0; /* Adjust padding */
+}
+
+/* Header Section */
+header.primary {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background Video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.7); /* Transparent background */
+    z-index: 10;
+    padding: 10px 0; /* Padding for nav bar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add a shadow effect for some depth */
+    display: flex;
+    justify-content: space-between; /* Keep logo on the left, menu on the right */
+    align-items: center; /* Vertically center items */
+}
+
+/* Logo and Text in Navigation */
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav .logo img {
+    max-height: 40px; /* Adjust the size of the logo */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+nav .logo h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 10px;
+    text-align: left; /* Keep the text aligned to the left of the logo */
+    display: block;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 20px; /* Add some space from the right */
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+}
+
+/* Centering the Text Only */
+header.primary .header-content h2 {
+    position: absolute;
+    top: 40%;  /* Adjust vertical positioning */
+    left: 47%;  /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%);  /* Center the text */
+    font-size: 2rem;  /* Adjust the size to fit */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* General Container */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Guardian Grid Section */
+#articles {
+    background-color: #1a1a2e; /* Dark blue background */
+    padding: 50px 0; /* Spacing around the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    
+}
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+a.hover-button {
+    text-decoration: none;
+}
+
+
+
+/* Guardian Grid Layout */
+.guardian-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.guardian-grid figure {
+    width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.guardian-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.guardian-grid img:hover {
+    transform: scale(1.1);
+}
+
+.guardian-grid figure:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+}
+
+/* Guardian Text Styling */
+.guardian-grid figcaption {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffcc00; /* Gold text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .guardian-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guardian-grid figure {
+        width: 90%;
+    }
+}
+
+/* Hover Button */
+.hover-button {
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.hover-button:hover {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+}
+
+/* Planet Grid */
+.planet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.planet-grid figure {
+    width: 500px;
+    text-align: center;
+}
+
+.planet-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.planet-grid img:hover {
+    transform: scale(1.1);
+}
+.planet-grid figcaption{
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1a1a2e;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .guardian-grid figure {
+        width: 100%;
+    }
+
+    .planet-grid figure {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
