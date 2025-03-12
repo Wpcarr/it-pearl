@@ -1,48 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Destiny 2 - Game Modes</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Explore PvE and PvP game modes in Destiny 2.">
+    <meta name="description" content="Explore Destiny 2 game modes: PvE, PvP, Gambit, Seasonal Activities, and Holiday Events.">
     <meta name="author" content="Your Name">
-    <meta name="robots" content="noindex">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylea.css">
 </head>
 
 <body>
+    <!-- Header Section -->
     <header class="primary">
-        <h1><a href="index.html">Destiny 2</a></h1>
-        <h2>Conquer the Battlefield</h2>
         <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/d2logowp.webp" alt="Destiny 2 Logo"></a>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="classes.html">Classes</a></li>
-                <li><a href="activities.html">Game Modes</a></li>
+                <li><a href="activities.html" class="active">Game Modes</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="content" class="container">
+    <!-- Game Modes Introduction Section -->
+    <section id="modes-intro" class="container">
         <h2>Game Modes</h2>
-        <h3>PvE (Player vs Environment)</h3>
-        <ul>
-            <li><strong>Strikes:</strong> Three-player missions against powerful enemies.</li>
-            <li><strong>Raids:</strong> Six-player high-difficulty missions with puzzles and bosses.</li>
-            <li><strong>Dungeons:</strong> Three-player mini-raids with unique mechanics.</li>
-        </ul>
-        <h3>PvP (Player vs Player)</h3>
-        <ul>
-            <li><strong>Crucible:</strong> Classic multiplayer battles.</li>
-            <li><strong>Gambit:</strong> Hybrid PvE/PvP mode.</li>
-            <li><strong>Trials of Osiris:</strong> High-stakes 3v3 competitive mode.</li>
-        </ul>
+        <p>Whether you prefer PvE challenges, PvP combat, or the hybrid chaos of Gambit, Destiny 2 offers thrilling activities for every Guardian.</p>
+        <img src="assets/img/activities/gamemodes.avif" alt="Game Modes Overview" class="responsive-img">
+    </section>
+
+    <!-- PvE SECTION -->
+    <section id="pve" class="mode-section">
+        <div class="mode-info">
+            <h2>Player vs Environment (PvE)</h2>
+            <p>Engage in cooperative missions, take down powerful bosses, and explore the mysteries of the universe.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/activities/strike.jpg" alt="Strike Image">
+                    <img src="assets/img/activities/dungeon.webp" alt="Dungeon Image">
+                    <img src="assets/img/activities/raid.jpg" alt="Raid Image">
+                    <img src="assets/img/activities/onslaught.webp" alt="Onslaught Image">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Strikes:</strong> Short cooperative missions with intense combat.</li>
+                <li><strong>Dungeons:</strong> Challenging multi-phase encounters for fireteams.</li>
+                <li><strong>Raids:</strong> High-stakes six-player challenges with complex mechanics.</li>
+                <li><strong>Onslaught:</strong> A fast-paced PvE mode with waves of enemies and time-based challenges for rewards.</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- PvP SECTION -->
+    <section id="pvp" class="mode-section">
+        <div class="mode-info">
+            <h2>Player vs Player (PvP)</h2>
+            <p>Prove your skills against other Guardians in various competitive modes.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/activities/control.avif" alt="Control Image">
+                    <img src="assets/img/activities/elimination.jpg" alt="Elimination Image">
+                    <img src="assets/img/activities/trials.webp" alt="Trials Image">
+                    <img src="assets/img/activities/ironbanner.webp" alt="Iron Banner Image">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Control:</strong> Team-based zone control combat.</li>
+                <li><strong>Elimination:</strong> Tactical 3v3 battles.</li>
+                <li><strong>Trials of Osiris:</strong> High-stakes competitive PvP.</li>
+                <li><strong>Iron Banner:</strong> A PvP event with power-level advantages and exclusive rewards.</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- GAMBIT SECTION -->
+    <section id="gambit" class="mode-section">
+        <div class="mode-info">
+            <h2>Gambit</h2>
+            <p>A unique hybrid mode where PvE and PvP collide in a battle for motes and control.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/activities/gambit2.webp" alt="Gambit Gameplay">
+                    <img src="assets/img/activities/gambit3.avif" alt="Gambit Gameplay">
+                    <img src="assets/img/activities/gambit1.avif" alt="Gambit Gameplay">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Collect Motes:</strong> Defeat enemies and deposit motes.</li>
+                <li><strong>Summon Primeval:</strong> Bank 100 motes to summon the final boss.</li>
+                <li><strong>Invade:</strong> Attack the opposing team to slow their progress.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEASONAL ACTIVITY SECTION -->
+    <section id="seasonal" class="mode-section">
+        <div class="mode-info">
+            <h2>Seasonal Activity</h2>
+            <p>Each season introduces a unique activity with new challenges, rewards, and story developments.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/activities/seasonimg.jpg" alt="Seasonal Activity">
+                    <img src="assets/img/activities/seasonloot2.avif" alt="Seasonal Activity">
+                    <img src="assets/img/activities/seasonevent.jpg" alt="Seasonal Activity">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>New Storylines:</strong> Expanding the universe with lore-driven content.</li>
+                <li><strong>Exclusive Loot:</strong> Earn powerful seasonal weapons and armor.</li>
+                <li><strong>Limited-Time Events:</strong> Participate in time-sensitive activities for special rewards.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- HOLIDAY EVENTS SECTION -->
+    <section id="holiday" class="mode-section">
+        <div class="mode-info">
+            <h2>Holiday Events</h2>
+            <p>Destiny 2 celebrates special occasions with themed events, activities, and rewards.</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="assets/img/activities/lostfestival.jpg" alt="Holiday Event">
+                    <img src="assets/img/activities/dawning.jpg" alt="Holiday Event">
+                    <img src="assets/img/activities/gaurdiangames.jpg" alt="Holiday Event">
+                </div>
+                <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                <button class="next" onclick="nextSlide(this)">&#10095;</button>
+            </div>
+            <ul>
+                <li><strong>Festival of the Lost:</strong> Halloween-themed event with haunted sectors and cosmetics.</li>
+                <li><strong>The Dawning:</strong> Winter event featuring gift-giving and special quests.</li>
+                <li><strong>Guardian Games:</strong> Class-based competition with unique rewards.</li>
+            </ul>
+        </div>
     </section>
 
     <footer id="colophon">
-        <p>&copy; 2024 Your Name | <a href="mailto:contact@yourwebsite.com">Contact</a></p>
+        <div class="social-links">
+            <a href="https://twitter.com/Bungie" target="_blank" aria-label="Twitter">Twitter</a>
+            <a href="https://www.youtube.com/user/Bungie" target="_blank" aria-label="YouTube">YouTube</a>
+            <a href="https://www.instagram.com/bungie/" target="_blank" aria-label="Instagram">Instagram</a>
+        </div>
+        <p>&copy;2024 Wesley Carr | <a href="mailto:wpcarr@ualr.edu">Contact</a> | <a href="https://www.bungie.net/7/en/destiny" target="_blank">Official Site</a></p>
     </footer>
+    <script src="assets/js/scripta.js"></script>
 </body>
-
 </html>

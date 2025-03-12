@@ -27,7 +27,7 @@
     <section id="class-intro" class="container">
         <h2>Become a Guardian</h2>
         <p>Choose from three distinct classes, each with its own strengths and abilities.</p>
-        <img src="assets/img/thegaurdians.jpg" alt="Guardians" class="responsive-img">
+        <img src="assets/img/classes/thegaurdians.jpg" alt="Guardians" class="responsive-img">
     </section>
 
     <!-- TITAN SECTION -->
@@ -37,17 +37,21 @@
             <p>The frontline warrior. Masters of defense and brute strength. Titans use their strength to protect allies and crush enemies.</p>
             <div class="carousel-container">
                 <div class="carousel">
-                    <img src="assets/img/strikertitan.jpg" alt="Striker Image">
-                    <img src="assets/img/sentineltitan.jpg" alt="Sentinel Image">
-                    <img src="assets/img/sunbreaker2.jpg" alt="Sunbreaker Image">
+                    <img src="assets/img/classes/strikernew.avif" alt="Striker Image">
+                    <img src="assets/img/classes/newsentinel.jpg" alt="Sentinel Image">
+                    <img src="assets/img/classes/newsunbreaker.jpg" alt="Sunbreaker Image">
+                    <img src="assets/img/classes/behemoth.jpg" alt="Behemoth Image">
+                    <img src="assets/img/classes/beserker.jpg" alt="Beserker Image">
                 </div>
                 <button class="prev" onclick="prevSlide(this)">&#10094;</button>
                 <button class="next" onclick="nextSlide(this)">&#10095;</button>
             </div>
             <ul>
-                <li><strong>Striker:</strong> Unleash powerful arc-based attacks.</li>
-                <li><strong>Sentinel:</strong> Defend your team with void shields.</li>
-                <li><strong>Sunbreaker:</strong> Wield flaming hammers of destruction.</li>
+                <li><strong>Striker:</strong> Unleash powerful Arc-based attacks.</li>
+                <li><strong>Sentinel:</strong> Defend your team with Void shields.</li>
+                <li><strong>Sunbreaker:</strong> Wield Solar hammers of destruction.</li>
+                <li><strong>Behemoth:</strong>Freeze and shatter enemies with Stasis.</li>
+                <li><strong>Beserker:</strong>Carve through foes with lethal Strand claws.</li>
             </ul>
         </div>
     </section>
@@ -59,17 +63,21 @@
             <p>Harness the power of the Light and use it to support your allies. Warlocks are the mystics of the battlefield, wielding arcane energy.</p>
             <div class="carousel-container">
                 <div class="carousel">
-                    <img src="assets/img/dawnblade.webp" alt="Dawnblade Image">
-                    <img src="assets/img/voidwalker.jpg" alt="Voidwalker Image">
-                    <img src="assets/img/stormcaller.jpg" alt="Stormcaller Image">
+                    <img src="assets/img/classes/dawnblade.webp" alt="Dawnblade Image">
+                    <img src="assets/img/classes/voidwalker.jpg" alt="Voidwalker Image">
+                    <img src="assets/img/classes/stormcaller.jpg" alt="Stormcaller Image">
+                    <img src="assets/img/classes/shadebinder.jpg" alt="Shadebinder Image">
+                    <img src="assets/img/classes/broodweaver.webp" alt="Broodweaver Image">
                 </div>
                 <button class="prev" onclick="prevSlide(this)">&#10094;</button>
                 <button class="next" onclick="nextSlide(this)">&#10095;</button>
             </div>
             <ul>
-                <li><strong>Dawnblade:</strong> Soar through the air with flaming swords.</li>
-                <li><strong>Voidwalker:</strong> Channel deadly void energy.</li>
-                <li><strong>Stormcaller:</strong> Unleash powerful lightning attacks.</li>
+                <li><strong>Dawnblade:</strong> Soar through the air with Solar swords.</li>
+                <li><strong>Voidwalker:</strong> Channel deadly Void energy.</li>
+                <li><strong>Stormcaller:</strong> Unleash powerful Arc attacks.</li>
+                <li><strong>Shadebinder:</strong> Weild the power of pure zero with Stasis.</li>
+                <li><strong>Broodweaver:</strong> Command an army of Strand-threaded minions.</li>
             </ul>
         </div>
     </section>
@@ -81,17 +89,21 @@
             <p>Quick, agile, and deadly. Masters of precision and movement. Hunters are the scouts of the Last City, striking with deadly efficiency.</p>
             <div class="carousel-container">
                 <div class="carousel">
-                    <img src="assets/img/gunslinger.jpg" alt="gunslinger Image">
-                    <img src="assets/img/arcstrider.jpg" alt="arcstrider Image">
-                    <img src="assets/img/nightstalker.jpg" alt="nightstalker Image">
+                    <img src="assets/img/classes/gunslinger.jpg" alt="gunslinger Image">
+                    <img src="assets/img/classes/arcstrider.jpg" alt="arcstrider Image">
+                    <img src="assets/img/classes/newnightstalker.jpg" alt="nightstalker Image">
+                    <img src="assets/img/classes/revenant.webp" alt="Revenant Image">
+                    <img src="assets/img/classes/threadrunner.webp" alt="Threadrunner Image">
                 </div>
                 <button class="prev" onclick="prevSlide(this)">&#10094;</button>
                 <button class="next" onclick="nextSlide(this)">&#10095;</button>
             </div>
             <ul>
                 <li><strong>Gunslinger:</strong> Use golden gun to incinerate enemies.</li>
-                <li><strong>Arcstrider:</strong> Dance through battle with a staff of pure arc energy.</li>
-                <li><strong>Nightstalker:</strong> Utilize void energy to trap enemies.</li>
+                <li><strong>Arcstrider:</strong> Dance through battle with a staff of pure Arc energy.</li>
+                <li><strong>Nightstalker:</strong> Utilize Void energy to hunt and trap enemies.</li>
+                <li><strong>Revenant:</strong>  Carve through enemies with lethal Stasis blades.</li>
+                <li><strong>Threadrunner:</strong> Swing and strike with deadly Strand threads.</li>
             </ul>
         </div>
     </section>
@@ -106,33 +118,7 @@
         <p>&copy; 2024 Wesley Carr | <a href="mailto:wpcarr@ualr.edu">Contact</a> | <a href="https://www.bungie.net/7/en/destiny" target="_blank">Official Site</a></p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousels = document.querySelectorAll(".carousel-container");
-
-            carousels.forEach((carouselContainer) => {
-                const carousel = carouselContainer.querySelector(".carousel");
-                const images = carousel.querySelectorAll("img");
-                let index = 0;
-
-                const nextBtn = carouselContainer.querySelector(".next");
-                const prevBtn = carouselContainer.querySelector(".prev");
-
-                function updateCarousel() {
-                    carousel.style.transform = `translateX(-${index * 100}%)`;
-                }
-
-                nextBtn.addEventListener("click", () => {
-                    index = (index + 1) % images.length;
-                    updateCarousel();
-                });
-
-                prevBtn.addEventListener("click", () => {
-                    index = (index - 1 + images.length) % images.length;
-                    updateCarousel();
-                });
-            });
-        });
-    </script>
+    <script src="assets/js/scriptc.js"></script>
+      
 </body>
 </html>
