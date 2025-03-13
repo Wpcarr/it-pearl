@@ -8,14 +8,16 @@ body {
     text-align: center;
 }
 @font-face {
-    font-family:'bungiefont' ;
-    src: url('fonts/bungiefont.woff2');
+    font-family: 'bungiefont';
+    src: url('../fonts/bungiefont.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
-body{
-    font-family: 'bungiefont',  material-icon;
+
+body {
+    font-family: 'bungiefont', 'Lato', sans-serif;
 }
+
 /* Main Page Specific Header */
 body.main-page header.primary {
     height: 100vh; /* Keep fullscreen header on the main page */
