@@ -1,0 +1,50 @@
+.formcontainer {
+    width: 100%;            /* Use full width of the screen */
+    max-width: 1000px;      /* Ensure it doesn't grow beyond this */
+    padding: 20px;          /* Padding around the form */
+    margin: 0 auto;         /* Center the form */
+}
+
+.formlabel {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 5px;
+}
+
+.error {
+    color: red;
+    padding-left: 5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#currencyChart {
+    width: 100%; /* Full width of the parent container */
+    height: 100px; /* Set a fixed height */
+    margin: 0 auto; /* Center the chart horizontally */
+    display: block; /* Ensure the chart behaves like a block element */
+}
+
+
+@media (max-width: 768px) {
+    .formcontainer {
+        width: 90%;       /* Slightly smaller container for mobile */
+    }
+
+    #currencyChart {
+        width: 100%; /* Full width of the parent container */
+        height: 300px; /* Reduced height */
+        margin: 0 auto; /* Center the chart horizontally */
+        display: block; /* Ensure the chart behaves like a block element */
+    }
+    
+}
