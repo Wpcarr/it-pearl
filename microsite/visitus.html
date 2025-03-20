@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bungie HQ & Weather</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore Bungie headquarters and check the current weather.">
+    <meta name="author" content="Wesley Carr">
+    <link rel="stylesheet" href="assets/css/styleb.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="primary">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/d2logowp.webp" alt="Destiny 2 Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="activities.html">Game Modes</a></li>
+                <li><a href="visitus.html" >Bungie HQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bungie HQ Section -->
+    <section id="bungie-hq" class="container">
+        <h2>Bungie Headquarters</h2>
+        <p>Bungie, the developer behind Destiny 2, is located in Bellevue, Washington.</p>
+        <div class="bungie-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.485631511353!2d-122.18712802452243!3d47.61534127119114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906c4ef51c14a3%3A0x77f4b103cf7268b6!2sBungie%2C%20Inc.!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Location Search Section -->
+    <section id="location-search" class="container">
+        <h2>Weather Forecast</h2>
+        <p>Enter a location to see the 7-day forecast.</p>
+        <input type="text" id="locationInput" placeholder="Enter location (e.g., Seattle)">
+        <button onclick="getWeather()">Get Weather</button>
+        <p id="errorMessage" style="color: red; display: none;">Please enter a valid location.</p>
+    </section>
+
+    <!-- Weather Info -->
+    <section id="weather-info" class="container">
+        <h3>Location Details</h3>
+        <p><strong>Name:</strong> <span id="locationName"></span></p>
+        <p><strong>Region:</strong> <span id="locationRegion"></span></p>
+        <p><strong>Country:</strong> <span id="locationCountry"></span></p>
+        <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+        <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+    </section>
+
+    <!-- Weather Table -->
+    <section id="weather-table" class="container">
+        <h3>7-Day Temperature Forecast</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Temperature (°F)</th>
+                </tr>
+            </thead>
+            <tbody id="forecastTable"></tbody>
+        </table>
+    </section>
+
+    <!-- Chart -->
+    <section id="weather-chart" class="container">
+        <h3>Temperature Trend</h3>
+        <canvas id="chartjs-0"></canvas>
+    </section>
+    <!-- Footer -->
+    <footer id="colophon">
+        <div class="social-links">
+            <a href="https://twitter.com/Bungie" target="_blank" aria-label="Twitter">Twitter</a>
+            <a href="https://www.youtube.com/user/Bungie" target="_blank" aria-label="YouTube">YouTube</a>
+            <a href="https://www.instagram.com/bungie/" target="_blank" aria-label="Instagram">Instagram</a>
+            <a href="https://yelsew.wufoo.com/forms/ztrz4fb0hfdfvy/" target="_blank" aria-label="ContactForm">More Info</a>
+        </div>
+        <p>&copy;2024 Wesley Carr | <a href="mailto:wpcarr@ualr.edu">Contact</a> | <a href="https://www.bungie.net/7/en/destiny" target="_blank">Official Site</a></p>
+    </footer>
+
+    <script src="assets/js/weather.js"></script>
+</body>
+</html>

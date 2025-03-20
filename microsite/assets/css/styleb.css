@@ -1,0 +1,269 @@
+/* General Styles */
+body {
+    font-family: 'bungiefont', bungie-font;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #ffcc00;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffaa00;
+}
+/* Remove bullet points from list items */
+ul {
+    list-style-type: none;
+    padding: 0; /* Optional: Removes padding for a cleaner look */
+    margin: 0;  /* Optional: Removes margin if you want to align the list perfectly */
+}
+
+
+/* Header Section */
+header.primary {
+    background-color: rgba(18, 18, 18, 0.9);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header.primary nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.7);
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and Navigation */
+nav .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav .logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+nav .logo h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Game Modes Intro */
+#modes-intro {
+    text-align: center;
+    background-color: #1a1a2e;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+/* Adjust image size in Game Modes Intro */
+#modes-intro img {
+    max-width: 90%; /* Adjust this value to make the image smaller */
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: 20px auto; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+/* Game Mode Sections */
+.mode-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* 🚀 Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    height: 350px; /* Ensure a fixed height */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔄 Carousel Wrapper */
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Images */
+.carousel img {
+    width: 100%; /* Ensure the image takes up the entire width of the container */
+    height: auto; /* Maintains aspect ratio */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    display: block; /* Ensures the image behaves as a block element */
+}
+
+/* Carousel Buttons */
+.carousel-container .prev,
+.carousel-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-container .prev {
+    left: 10px;
+}
+
+.carousel-container .next {
+    right: 10px;
+}
+
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+    background-color: rgba(255, 204, 0, 0.8);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1a1a2e;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Social Links */
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: #ffcc00;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #ffaa00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .carousel-container {
+        max-width: 90%;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .mode-section {
+        padding: 30px 15px;
+    }
+    
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 15px; /* Increased space between nav items */
+    }
+
+    .carousel-container {
+        max-width: 90%;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .mode-section {
+        padding: 40px 20px; /* Increased padding */
+    }
+    
+}
+#chartjs-0 {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+}
